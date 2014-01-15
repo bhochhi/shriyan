@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Insert title here</title>
+	 <h:outputStylesheet library="css" name="default.css"/>
+</h:head>
+<h:body>
+	<h:graphicImage url="http://107.213.30.25:8002" />
+	<br />
+	<h:form>
+		<h:commandButton value="Left" type="submit"
+			action="#{remoteCar.moveLeft}" />
+		<h:commandButton value="Forward" type="submit"
+			action="#{remoteCar.moveForward}" />
+		<h:commandButton value="Reverse" type="submit"
+			action="#{remoteCar.moveReverse}" />
+		<h:commandButton value="Right" type="submit"
+			action="#{remoteCar.moveRight}" />
+	</h:form>
+		<h:outputText id="result" value="#{remoteCar.response}" />
+
+</h:body>
+</html>
