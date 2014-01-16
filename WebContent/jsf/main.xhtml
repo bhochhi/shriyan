@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
 	<title>Insert title here</title>
-	 <h:outputStylesheet library="css" name="default.css"/>
+	<h:outputStylesheet library="css" name="default.css" />
 </h:head>
 <h:body>
 	<h:graphicImage url="http://107.213.30.25:8002" />
 	<br />
 	<h:form>
+	<div>
+	
+	</div>
+
 		<h:commandButton value="Left" type="submit"
-			action="#{remoteCar.moveLeft}" />
+			action="#{remoteCar.moveLeft}">
+			<f:ajax render="output" />
+		</h:commandButton>
+		
 		<h:commandButton value="Forward" type="submit"
-			action="#{remoteCar.moveForward}" />
+			action="#{remoteCar.moveForward}">
+			<f:ajax render="output" />
+		</h:commandButton>
 		<h:commandButton value="Reverse" type="submit"
-			action="#{remoteCar.moveReverse}" />
+			action="#{remoteCar.moveReverse}">
+			<f:ajax render="output" />
+		</h:commandButton>
 		<h:commandButton value="Right" type="submit"
-			action="#{remoteCar.moveRight}" />
+			action="#{remoteCar.moveRight}">
+			<f:ajax render="output" />
+		</h:commandButton>
 	</h:form>
-		<h:outputText id="result" value="#{remoteCar.response}" />
+	<h:outputText id="output" value="#{remoteCar.response}" />
 
 </h:body>
 </html>
